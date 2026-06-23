@@ -1,548 +1,286 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Dolce Delícias</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Algoritmo de Validação do CPF</title>
   </head>
   <body>
-    <header>
-      <div class="container_logo-header">
-        <img
-          src="img/dolce-delicias-logo.png"
-          alt="Dolce Delícias Logo - Header"
-          class="logo-header"
-        />
-      </div>
-      <button class="hamburguer" id="botaoMenu" aria-label="Abrir menu">
-        ☰
-      </button>
-      <nav>
-        <ul class="menu-navegacao" id="menu">
-          <li><a href="#hero">Início</a></li>
-          <li><a href="#nossa-historia">Nossa História</a></li>
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#unidades">Unidades</a></li>
-          <li><a href="#encomendas">Encomendas</a></li>
-          <li><a href="#horarios">Horários</a></li>
-          <li><a href="#duvidas">Dúvidas</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section id="hero" class="hero secoes-principais">
-        <div class="container hero-grid">
-          <div class="hero-texto">
-            <img
-              src="img/dolce-delicias-logo.png"
-              alt="Dolce Delícias Logo - Hero"
-              class="logo-hero"
-            />
-            <span class="descricao">📍 Feito com amor, em Toledo.</span>
-            <h1>Doces e Salgados Artesanais com Receita de Família</h1>
-            <h2>
-              Brigadeiros, salgadinhos, congelados e kits para festa — sempre
-              fresquinhos, com entrega em toda Toledo.
-            </h2>
-            <button>Quero fazer um pedido pelo WhatsApp</button>
-            <div class="tags tags-coloridas">
-              <span class="tag tag-artesanal">🍫 Artesanal</span>
-              <span class="tag tag-entrega">🚚 Entrega em Toledo</span>
-              <span class="tag tag-whatsapp">💬 Pedido pelo WhatsApp</span>
-              <span class="tag tag-festa">🎉 Kits de Festa</span>
-            </div>
-          </div>
-          <div class="container_foto-produtos">
-            <img
-              src="img/foto-hero.webp"
-              alt="Proprietária da Dolce Delícias sorrindo enquanto apresenta os produtos artesanais"
-              class="foto-produtos"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="nossa-historia" class="nossa-historia secoes-principais">
-        <div class="container nossa-historia-container">
-          <div class="img-nossa-historia">
-            <img
-              src="img/imagem-equipe.webp"
-              alt="[Foto da cozinha ou da equipe]"
-              class="foto-cozinha"
-            />
-          </div>
-          <div class="nossa-historia-texto">
-            <span class="tag-titulo">NOSSA HISTÓRIA</span>
-            <h1 class="secao-titulo">Uma história feita de sabor</h1>
-
-            <p class="breve-descrição">
-              Para quem nos conhece e nos acompanha, provavelmente sabe como a
-              Dolce Delícias começou e como se tornou referência em lanches
-              escolares e salgados para festas. Tudo começou devido a uma
-              necessidade financeira e a dificuldade de fazer nossa filha comer.
-              Começamos com pães caseiros, mini pizzas e salgadinhos fritos e
-              assados para festas, com receitas caseiras deliciosas passadas de
-              geração em geração que nos acompanham até hoje.
-            </p>
-
-            <p class="breve-descrição">
-              Surgiu em um momento difícil, mas nos ensinou a sermos
-              persistentes. Graças ao amor e carinho que dedicamos às nossas
-              receitas, os produtos foram sendo aceitos cada vez mais. As
-              encomendas que eram pequenas começaram a aumentar, e logo
-              precisamos mudar a produção para uma área maior e mais
-              estruturada. Com a expansão vieram novas oportunidades:
-              especializamo-nos em lanches infantis para educação infantil,
-              depois em cantinas escolares e, mais recentemente, em refeições
-              escolares.
-            </p>
-
-            <p class="breve-descrição">
-              Hoje vemos uma empresa sólida, com vários pontos de venda, equipe
-              formada e nome reconhecido no mercado. Mas quem conhece a história
-              sabe: por trás de cada fornada está a alma de quem não teve medo
-              de começar pequeno.
-            </p>
-
-            <span class="texto-destacado">
-              "Por trás de cada fornada está a alma de quem não teve medo de
-              começar pequeno, de ouvir 'não', de enfrentar o sol, a chuva e o
-              cansaço — e mesmo assim, seguiu em frente."
-            </span>
-          </div>
-        </div>
-      </section>
-
-      <section id="produtos" class="produtos secoes-principais">
-        <div class="container produtos-container">
-          <div class="produtos-header">
-            <span class="tag-titulo">NOSSOS PRODUTOS</span>
-            <h1 class="secao-titulo">Uma provinha do que temos</h1>
-            <span class="subtitulo"
-              >Esses são só alguns dos nossos produtos — quer ver tudo? O
-              cardápio completo está no WhatsApp.</span
-            >
-          </div>
-          <div class="filtros-container">
-            <button class="filtro-botao active" data-filtro="todos">
-              Todos
-            </button>
-            <button class="filtro-botao" data-filtro="salgados">
-              Salgados
-            </button>
-            <button class="filtro-botao" data-filtro="lanches">Lanches</button>
-            <button class="filtro-botao" data-filtro="kits">
-              Kits para Festa
-            </button>
-          </div>
-
-          <div class="cards-container">
-            <div class="card" data-categoria="lanches">
-              <div class="imagem-container">
-                <img
-                  src="img/produtos/assado-calabresa.jpg"
-                  alt="Foto do Assado de Calabresa"
-                />
-              </div>
-              <div class="produto-informacoes">
-                <span class="produto-nome">Assado de Calabresa</span>
-                <span class="produto-descricao"
-                  >Pão, requeijão, queijo e presunto</span
-                >
-              </div>
-              <div class="produto-footer">
-                <span class="produto-preco">R$ 8,00 / unidade</span>
-              </div>
-            </div>
-            <div class="card card-destaque" data-categoria="kits">
-              <span class="selo-mais-pedido">⭐ O queridinho</span>
-              <div class="imagem-container">
-                <img
-                  src="img/produtos/kit-salgados.jpg"
-                  alt="Foto do Kit de Salgados Fritos Sortidos"
-                />
-              </div>
-              <div class="produto-informacoes">
-                <span class="produto-nome">Kit Salgados Fritos (Sortido)</span>
-                <span class="produto-descricao"
-                  >Mix de coxinha, bolinha de queijo, pastel de carne, palitinho
-                  de carne, enroladinho de salsicha, trouxinha de presunto e
-                  queijo e quibe</span
-                >
-              </div>
-              <div class="produto-footer">
-                <span class="produto-preco">R$ 85,00 / 100 unidades</span>
-              </div>
-            </div>
-            <div class="card" data-categoria="salgados">
-              <div class="imagem-container">
-                <img
-                  src="img/produtos/esfilha-frango.jpg"
-                  alt="Foto da Esfiha de Frango"
-                />
-              </div>
-              <div class="produto-informacoes">
-                <span class="produto-nome">Esfiha de Frango</span>
-              </div>
-              <div class="produto-footer">
-                <span class="produto-preco">R$ 9,00 / unidade</span>
-              </div>
-            </div>
-            <div class="card" data-categoria="kits">
-              <div class="imagem-container">
-                <img
-                  src="img/produtos/mini-pizza.jpg"
-                  alt="Foto de Mini Pizza"
-                />
-              </div>
-              <div class="produto-informacoes">
-                <span class="produto-nome">Mini Pizza</span>
-              </div>
-              <div class="produto-footer">
-                <span class="produto-preco">R$ 220,00 / 100 unidades</span>
-              </div>
-            </div>
-          </div>
-          <div class="botao-container">
-            <button class="botao-ver-todos">Ver o cardápio completo</button>
-          </div>
-          <span class="pedidos-especiais"
-            >📦 Não achou o que queria? Fale com a gente pelo WhatsApp.</span
-          >
-        </div>
-      </section>
-
-      <section id="unidades" class="unidades secoes-principais">
-        <div class="container unidades-container">
-          <div class="unidades-header">
-            <span class="tag-titulo">NOSSAS UNIDADES</span>
-            <h1 class="secao-titulo">Escolha a unidade mais perto de você</h1>
-            <span class="subtitulo">Estamos pertinho de você em Toledo.</span>
-          </div>
-
-          <div class="unidades-cards">
-            <div class="unidade-card">
-              <div class="unidade-cabecalho">
-                <span class="unidade-nome"
-                  >Unidade Dolce Delicias Alimentos</span
-                >
-              </div>
-              <div class="unidade-mapa">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.2905517777695!2d-53.7358584!3d-24.7169034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f3bfe7f74ff1af%3A0x32e517393d9bb5b5!2sDolce%20Delicias%20Alimentos%20%7C%20Salgados%20para%20festas%20%7C!5e0!3m2!1spt-BR!2sbr!4v1782083288827!5m2!1spt-BR!2sbr"
-                  width="600"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-              <div class="unidade-rodape">
-                <span class="unidade-info"
-                  >📍 Rua São João, 7408 - Jardim Gisela, Toledo - PR</span
-                >
-              </div>
-            </div>
-            <div class="unidade-card">
-              <div class="unidade-cabecalho">
-                <span class="unidade-nome"
-                  >Unidade Dolce Delícias Lancheira Feliz</span
-                >
-              </div>
-              <div class="unidade-mapa">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.9095686964865!2d-53.74949780000001!3d-24.7299847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f395989b23a589%3A0xf4a5217758ff30a2!2sDolce%20Del%C3%ADcias%20Lancheira%20Feliz!5e0!3m2!1spt-BR!2sbr!4v1782083411554!5m2!1spt-BR!2sbr"
-                  width="600"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-              <div class="unidade-rodape">
-                <span class="unidade-info"
-                  >📍 Rua Guarani, 2463 - Jardim La Salle, Toledo - PR</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="encomendas" class="encomendas secoes-principais">
-        <div class="container encomendas-container">
-          <div class="encomendas-header">
-            <span class="tag-titulo">ENCOMENDAS</span>
-            <h1 class="secao-titulo">
-              Como funciona: peça em 4 passos simples
-            </h1>
-          </div>
-          <div class="passos-lista">
-            <div class="passo">
-              <span class="passo-numero">1</span>
-              <div class="passo-texto">
-                <span class="passo-titulo">Escolha seu produto</span>
-                <span class="passo-descricao"
-                  >Dê uma olhada no cardápio ali em cima e separe o que quiser
-                  pedir</span
-                >
-              </div>
-            </div>
-            <div class="passo">
-              <span class="passo-numero">2</span>
-              <div class="passo-texto">
-                <span class="passo-titulo">Fale pelo WhatsApp</span>
-                <span class="passo-descricao">
-                  Toque no botão verde — a mensagem já vai pronta, é só
-                  enviar</span
-                >
-              </div>
-            </div>
-            <div class="passo">
-              <span class="passo-numero">3</span>
-              <div class="passo-texto">
-                <span class="passo-titulo">Combine prazo e entrega</span>
-                <span class="passo-descricao"
-                  >A gente combina com você o prazo e a forma de entrega, sem
-                  complicação</span
-                >
-              </div>
-            </div>
-            <div class="passo">
-              <span class="passo-numero">4</span>
-              <div class="passo-texto">
-                <span class="passo-titulo">Confirme e aguarde</span>
-                <span class="passo-descricao"
-                  >Confirmamos tudo com você e preparamos seu pedido com todo
-                  cuidado</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="encomendas-info">
-            <div class="info-linha">
-              <span class="info-icone">💳</span>
-              <span class="info-label">Pagamento</span>
-              <span class="info-traco">—</span>
-              <span class="info-valor">Pix, dinheiro ou cartão</span>
-            </div>
-            <div class="info-linha">
-              <span class="info-icone">⏰</span>
-              <span class="info-label">Prazo mínimo</span>
-              <span class="info-traco">—</span>
-              <span class="info-valor">Em confirmação com o cliente</span>
-            </div>
-            <div class="info-linha">
-              <span class="info-icone">📍</span>
-              <span class="info-label">Entrega</span>
-              <span class="info-traco">—</span>
-              <span class="info-valor"
-                >Entregamos em toda Toledo, exceto a região do Biopark</span
-              >
-            </div>
-          </div>
-          <button class="botao-encomenda">
-            💬 Fazer minha encomenda agora
-          </button>
-          <span class="encomenda-aviso"
-            >Vamos te redirecionar para o WhatsApp — é rapidinho</span
-          >
-        </div>
-      </section>
-
-      <section id="horarios" class="horarios secoes-principais">
-        <div class="container horarios-container">
-          <div class="horarios-header">
-            <span class="tag-titulo">HORÁRIOS</span>
-            <h1 class="secao-titulo">Quando estamos abertos</h1>
-          </div>
-          <div class="horarios-cards">
-            <div class="horario-card">
-              <div class="horario-cabecalho">
-                Unidade Dolce Delicias Alimentos
-              </div>
-              <div class="horario-linha">
-                <span class="horario-dia">Segunda a Sexta</span>
-                <span class="horario-hora">07h00 às 17h00</span>
-              </div>
-              <div class="horario-linha">
-                <span class="horario-dia">Sábado</span>
-                <span class="horario-pill">Somente por entrega</span>
-              </div>
-              <div class="horario-linha">
-                <span class="horario-dia fechado">Domingo</span>
-                <span class="horario-fechado">✕ Fechado</span>
-              </div>
-            </div>
-            <div class="horario-card">
-              <div class="horario-cabecalho">
-                Unidade Dolce Delícias Lancheira Feliz
-              </div>
-              <div class="horario-linha">
-                <span class="horario-dia">Segunda a Sexta</span>
-                <span class="horario-hora"
-                  >09h00 às 12h30 | 13h30 às 18h30</span
-                >
-              </div>
-              <div class="horario-linha">
-                <span class="horario-dia">Sábado</span>
-                <span class="horario-pill">Somente por entrega</span>
-              </div>
-              <div class="horario-linha">
-                <span class="horario-dia fechado">Domingo</span>
-                <span class="horario-fechado">✕ Fechado</span>
-              </div>
-            </div>
-          </div>
-          <span class="horarios-aviso"
-            >⚠ Em feriados, o horário pode mudar — confirme rapidinho pelo
-            WhatsApp.</span
-          >
-        </div>
-      </section>
-
-      <section id="duvidas" class="duvidas secoes-principais">
-        <div class="container duvidas-container">
-          <div class="duvidas-header">
-            <span class="tag-titulo">DÚVIDAS</span>
-            <h1 class="secao-titulo">Perguntas que mais recebemos</h1>
-            <span class="subtitulo"
-              >Tudo que você precisa saber antes de pedir.</span
-            >
-          </div>
-          <div class="perguntas-container">
-            <details class="pergunta" open>
-              <summary>Vocês entregam em toda Toledo?</summary>
-              <p>
-                Entregamos em toda Toledo, com uma exceção: a região do Biopark.
-                Me chama no WhatsApp que confirmo rapidinho se sua casa está na
-                nossa área.
-              </p>
-            </details>
-            <details class="pergunta">
-              <summary>Qual o prazo mínimo para encomendar?</summary>
-              <p>
-                Pedimos pelo menos 48 horas de antecedência. Se for festa ou kit
-                grande, me chama com uns 3 dias de folga — assim garanto tudo
-                fresquinho e no capricho.
-              </p>
-            </details>
-            <details class="pergunta">
-              <summary>Quais formas de pagamento vocês aceitam?</summary>
-              <p>
-                Aceitamos Pix, dinheiro e cartão (débito ou crédito). A gente
-                combina a forma certinha na hora de confirmar seu pedido.
-              </p>
-            </details>
-            <details class="pergunta">
-              <summary>Os congelados já vêm prontos para consumo?</summary>
-              <p>
-                Vêm crus, prontos pra ir direto na fritadeira ou no forno. A
-                gente manda as instruções juntinho com o pedido, então não tem
-                erro.
-              </p>
-            </details>
-            <details class="pergunta">
-              <summary>Fazem kits para festas infantis?</summary>
-              <p>
-                Fazemos sim! Montamos kits para festa infantil com doces,
-                salgados e itens decorados — do seu jeitinho. Me chama no
-                WhatsApp que a gente monta certinho pro tamanho da sua festa.
-              </p>
-            </details>
-            <details class="pergunta">
-              <summary>Como acompanho meu pedido após confirmar?</summary>
-              <p>
-                Depois que o pedido é confirmado, a gente mantém contato com
-                você pelo WhatsApp e avisa assim que ele sair pra entrega. Você
-                não precisa ficar perguntando.
-              </p>
-            </details>
-          </div>
-          <div class="duvidas-cta">
-            <span class="duvidas-cta-texto">Não achou sua resposta aqui?</span>
-            <span class="duvidas-cta-link"
-              >Fale com a gente pelo WhatsApp →</span
-            >
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-topo">
-          <div class="logo-container">
-            <img
-              src="img/dolce-delicias-logo.png"
-              alt="Dolce Delícias Logo - Footer"
-              class="logo-footer"
-            />
-            <span class="footer-slogan">Feito com amor, em Toledo.</span>
-          </div>
-          <div class="footer-main">
-            <aside class="navegacao">
-              <span class="footer-titulo">Navegação</span>
-              <nav>
-                <ul>
-                  <li><a href="#hero">Início</a></li>
-                  <li><a href="#nossa-historia">Nossa História</a></li>
-                  <li><a href="#produtos">Produtos</a></li>
-                  <li><a href="#unidades">Unidades</a></li>
-                  <li><a href="#encomendas">Encomendas</a></li>
-                  <li><a href="#horarios">Horários</a></li>
-                  <li><a href="#duvidas">Dúvidas</a></li>
-                </ul>
-              </nav>
-            </aside>
-            <aside class="contato">
-              <span class="footer-titulo">Contato</span>
-              <div class="whatsapp">
-                <span class="whatsapp-icone">💬</span>
-                <span class="whatsapp-numero">(45) 99806-4748</span>
-              </div>
-              <div class="icones">
-                <a
-                  href="https://www.instagram.com/dolcedeliciasoficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                  target="_blank"
-                  class="icone-social"
-                >
-                  <img
-                    src="img/icones/instagram-icone.png"
-                    class="instagram-icone"
-                    alt="Ícone do Instagram"
-                  />
-                </a>
-                <a
-                  href="https://www.facebook.com/dolcedeliciasoficial/"
-                  target="_blank"
-                  class="icone-social"
-                >
-                  <img
-                    src="img/icones/facebook-icone.png"
-                    class="facebook-icon"
-                    alt="Ícone do Facebook"
-                  />
-                </a>
-              </div>
-            </aside>
-          </div>
-        </div>
-        <hr />
-        <p class="direitos-autorais">
-          © 2026 Dolce Delícias. Todos os direitos reservados.
+    <div class="pagina">
+      <!-- ── Cabeçalho ─────────────────────────────────────── -->
+      <header>
+        <h1>Algoritmo de Validação do CPF</h1>
+        <p>
+          Como os dígitos verificadores são calculados — do zero, passo a passo
         </p>
-      </div>
-    </footer>
+      </header>
 
-    <a href="https://wa.me/5545998064748" class="botao-whatsapp" target="_blank"
-      >💬</a
-    >
+      <!-- ── Seção interativa ───────────────────────────────── -->
+      <section aria-label="Validador de CPF">
+        <h2>Teste um CPF</h2>
+        <div class="validador">
+          <label for="cpf-input">Digite um CPF</label>
+          <div class="campo-cpf">
+            <input
+              type="text"
+              id="cpf-input"
+              placeholder="000.000.000-00"
+              maxlength="14"
+              autocomplete="off"
+              inputmode="numeric"
+              aria-describedby="resultado"
+            />
+          </div>
+          <div id="resultado" role="status" aria-live="polite"></div>
+        </div>
+      </section>
 
-    <script src="script.js"></script>
+      <!-- ── Explicação do algoritmo ───────────────────────── -->
+      <main>
+        <h2>Como o algoritmo funciona</h2>
+
+        <p>
+          O CPF tem 11 dígitos. Os 9 primeiros identificam o contribuinte; os 2
+          últimos são os
+          <strong>dígitos verificadores</strong> — calculados a partir dos
+          anteriores. Para validar um CPF, recalculamos esses dois dígitos e
+          conferimos se batem com os informados.
+        </p>
+
+        <p>
+          Usaremos o CPF fictício <strong>111.444.777-35</strong> como exemplo.
+        </p>
+
+        <!-- Primeiro dígito -->
+        <h3>Passo 1 — Calcular o primeiro dígito verificador</h3>
+
+        <p>
+          Pegamos os 9 primeiros dígitos (<code>111.444.777</code>) e
+          multiplicamos cada um por um peso decrescente, de
+          <strong>10 a 2</strong>, da esquerda para a direita:
+        </p>
+
+        <div class="tabela-wrapper">
+          <table
+            class="tabela-algoritmo"
+            aria-label="Cálculo do primeiro dígito verificador"
+          >
+            <thead>
+              <tr>
+                <th>Dígito</th>
+                <th>1</th>
+                <th>1</th>
+                <th>1</th>
+                <th>4</th>
+                <th>4</th>
+                <th>4</th>
+                <th>7</th>
+                <th>7</th>
+                <th>7</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="linha-pesos">
+                <td>Peso</td>
+                <td>10</td>
+                <td>9</td>
+                <td>8</td>
+                <td>7</td>
+                <td>6</td>
+                <td>5</td>
+                <td>4</td>
+                <td>3</td>
+                <td>2</td>
+              </tr>
+              <tr class="linha-produtos">
+                <td>Produto</td>
+                <td>10</td>
+                <td>9</td>
+                <td>8</td>
+                <td>28</td>
+                <td>24</td>
+                <td>20</td>
+                <td>28</td>
+                <td>21</td>
+                <td>14</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Somamos todos os produtos:</p>
+        <div class="calculo">
+          10 + 9 + 8 + 28 + 24 + 20 + 28 + 21 + 14 = <strong>162</strong>
+        </div>
+
+        <p>Dividimos por 11 e ficamos com o resto:</p>
+        <div class="calculo">162 ÷ 11 = 14, <strong>resto 8</strong></div>
+
+        <div class="regras">
+          <p>
+            — Se o resto for <strong>menor que 2</strong>: o dígito verificador
+            é <strong>0</strong>
+          </p>
+          <p>
+            — Se o resto for <strong>maior ou igual a 2</strong>: o dígito
+            verificador é
+            <strong>11 − resto</strong>
+          </p>
+        </div>
+
+        <p>
+          Resto 8 ≥ 2, então: <strong>11 − 8 = 3</strong> → primeiro dígito
+          verificador =
+          <strong>3</strong>
+        </p>
+        <p>CPF parcial: <code>111.444.777-3X</code></p>
+
+        <!-- Segundo dígito -->
+        <h3>Passo 2 — Calcular o segundo dígito verificador</h3>
+
+        <p>
+          Agora usamos os 9 dígitos originais
+          <em>mais o primeiro verificador</em> (10 dígitos no total) e os
+          multiplicamos por pesos de <strong>11 a 2</strong>:
+        </p>
+
+        <div class="tabela-wrapper">
+          <table
+            class="tabela-algoritmo"
+            aria-label="Cálculo do segundo dígito verificador"
+          >
+            <thead>
+              <tr>
+                <th>Dígito</th>
+                <th>1</th>
+                <th>1</th>
+                <th>1</th>
+                <th>4</th>
+                <th>4</th>
+                <th>4</th>
+                <th>7</th>
+                <th>7</th>
+                <th>7</th>
+                <th>3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="linha-pesos">
+                <td>Peso</td>
+                <td>11</td>
+                <td>10</td>
+                <td>9</td>
+                <td>8</td>
+                <td>7</td>
+                <td>6</td>
+                <td>5</td>
+                <td>4</td>
+                <td>3</td>
+                <td>2</td>
+              </tr>
+              <tr class="linha-produtos">
+                <td>Produto</td>
+                <td>11</td>
+                <td>10</td>
+                <td>9</td>
+                <td>32</td>
+                <td>28</td>
+                <td>24</td>
+                <td>35</td>
+                <td>28</td>
+                <td>21</td>
+                <td>6</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Somamos os produtos:</p>
+        <div class="calculo">
+          11 + 10 + 9 + 32 + 28 + 24 + 35 + 28 + 21 + 6 = <strong>204</strong>
+        </div>
+
+        <p>Dividimos por 11 e ficamos com o resto:</p>
+        <div class="calculo">204 ÷ 11 = 18, <strong>resto 6</strong></div>
+
+        <p>
+          Resto 6 ≥ 2, então: <strong>11 − 6 = 5</strong> → segundo dígito
+          verificador =
+          <strong>5</strong>
+        </p>
+        <p>CPF completo confirmado: <code>111.444.777-35</code> ✓</p>
+
+        <!-- Casos especiais -->
+        <h3>Casos especiais</h3>
+        <p>
+          CPFs formados por dígitos iguais — como <code>000.000.000-00</code> ou
+          <code>111.111.111-11</code> — passariam na conta matemática, mas são
+          <strong>inválidos por definição</strong>. O algoritmo deve rejeitá-los
+          explicitamente.
+        </p>
+
+        <!-- Código -->
+        <h2>Implementação em JavaScript</h2>
+
+        <div class="codigo-wrapper">
+          <div class="codigo-cabecalho">
+            <span>validarCPF.js</span>
+          </div>
+          <pre><code><span class="c-coment">/**
+ * Valida um CPF brasileiro.
+ * Aceita formatos: "111.444.777-35" ou "11144477735"
+ * Retorna true se o CPF é válido, false caso contrário.
+ */</span>
+<span class="c-palavra">function</span> <span class="c-func">validarCPF</span>(cpf) {
+
+  <span class="c-coment">// Remove tudo que não for dígito</span>
+  <span class="c-palavra">const</span> numeros = cpf.replace(<span class="c-string">/\D/g</span>, <span class="c-string">''</span>);
+
+  <span class="c-coment">// Deve ter exatamente 11 dígitos</span>
+  <span class="c-palavra">if</span> (numeros.length !== <span class="c-numero">11</span>) <span class="c-palavra">return</span> <span class="c-palavra">false</span>;
+
+  <span class="c-coment">// CPFs com todos os dígitos iguais são inválidos (ex.: 111.111.111-11)</span>
+  <span class="c-palavra">if</span> (<span class="c-string">/^(\d)\1{10}$/<br></span>.test(numeros)) <span class="c-palavra">return</span> <span class="c-palavra">false</span>;
+
+  <span class="c-coment">// Calcula um dígito verificador a partir de um subconjunto do CPF</span>
+  <span class="c-palavra">function</span> <span class="c-func">calcularDigito</span>(base, pesoInicial) {
+    <span class="c-palavra">const</span> soma = base
+      .split(<span class="c-string">''</span>)
+      .reduce((<span class="c-palavra">acumulador</span>, digito, indice) => {
+        <span class="c-palavra">return</span> acumulador + Number(digito) * (pesoInicial - indice);
+      }, <span class="c-numero">0</span>);
+
+    <span class="c-palavra">const</span> resto = soma % <span class="c-numero">11</span>;
+    <span class="c-palavra">return</span> resto < <span class="c-numero">2</span> ? <span class="c-numero">0</span> : <span class="c-numero">11</span> - resto;
+  }
+
+  <span class="c-coment">// Verifica o primeiro dígito (usa os 9 primeiros, pesos de 10 a 2)</span>
+  <span class="c-palavra">const</span> digito1 = <span class="c-func">calcularDigito</span>(numeros.slice(<span class="c-numero">0</span>, <span class="c-numero">9</span>), <span class="c-numero">10</span>);
+  <span class="c-palavra">if</span> (digito1 !== Number(numeros[<span class="c-numero">9</span>])) <span class="c-palavra">return</span> <span class="c-palavra">false</span>;
+
+  <span class="c-coment">// Verifica o segundo dígito (usa os 10 primeiros, pesos de 11 a 2)</span>
+  <span class="c-palavra">const</span> digito2 = <span class="c-func">calcularDigito</span>(numeros.slice(<span class="c-numero">0</span>, <span class="c-numero">10</span>), <span class="c-numero">11</span>);
+  <span class="c-palavra">if</span> (digito2 !== Number(numeros[<span class="c-numero">10</span>])) <span class="c-palavra">return</span> <span class="c-palavra">false</span>;
+
+  <span class="c-palavra">return</span> <span class="c-palavra">true</span>;
+}</code></pre>
+        </div>
+      </main>
+
+      <!-- ── Rodapé ──────────────────────────────────────────── -->
+      <footer>
+        <p>
+          Feito por Dener Emanuel dos Santos |
+          Baseado no conteúdo original de
+          <a href="https://www.macoratti.net" target="_blank" rel="noopener"
+            >José Carlos Macoratti</a
+          >
+          — macoratti.net
+        </p>
+      </footer>
+    </div>
+    <!-- /pagina -->
+    <script src="./script.js"></script>
   </body>
 </html>
